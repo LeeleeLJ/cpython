@@ -3,13 +3,9 @@
 （一）什么是json：
 
 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一个子集。JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。这些特性使JSON成为理想的数据交换语言。
-
 JSON建构于两种结构：
-
 “名称/值”对的集合（A collection of name/value pairs）。不同的语言中，它被理解为对象（object），纪录（record），结构（struct），字典（dictionary），哈希表（hash table），有键列表（keyed list），或者关联数组 （associative array）。
-
 值的有序列表（An ordered list of values）。在大部分语言中，它被理解为数组（array）。
-
 这些都是常见的数据结构。事实上大部分现代计算机语言都以某种形式支持它们。这使得一种数据格式在同样基于这些结构的编程语言之间交换成为可能。
 
 (二)Python JSON模块
@@ -23,7 +19,6 @@ import json
 
 Python JSON模块可以直接处理简单数据类型（string、unicode、int、float、list、tuple、dict）。 json.dumps()方法返回一个str对象，编码过程中会存在从python原始类型向json类型的转化过程，具体的转化对照如下：
 20154892843670.png (244×200)
-
 json.dumps方法提供了很多好用的参数可供选择，比较常用的有sort_keys（对dict对象进行排序，我们知道默认dict是无序存放的）、separators，indent等参数，dumps方法的定义为：
 1
 json.dump(obj, fp, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True,cls=None, indent=None, separators=None, encoding="utf-8", default=None, sort_keys=False,**kw)
