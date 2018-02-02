@@ -11,6 +11,11 @@ JSON建构于两种结构：
 (二)Python JSON模块
 
 Python2.6开始加入了JSON模块，无需另外下载，Python的Json模块序列化与反序列化的过程分别是 encoding和 decoding。encoding-把一个Python对象编码转换成Json字符串；decoding-把Json格式字符串解码转换成Python对象。
+
+Python3 中可以使用 json 模块来对 JSON 数据进行编解码，它包含了两个函数：
+json.dumps(): 对数据进行编码。
+json.loads(): 对数据进行解码。
+
 要使用json模块必须先导入：
 
 import json
@@ -32,7 +37,7 @@ print ('length of obj is:',repr(len(obj)))
 print ('repr(obj),replace whiteblank with *:\n', repr(obj).replace(' ','*')) 
 print ('json encoded,replace whiteblank with *:\n',encodedjson.replace(' ','*'))
 >>>
-输出：（Python默认的item separator是‘, '(不是',')，所以list无论是转化成字符串还是json格式，成员之间都是有空格隔开的）
+输出：（Python默认的item separator是', '(不是',')，所以list无论是转化成字符串还是json格式，成员之间都是有空格隔开的）
 
 the original list: 
 [[1, 2, 3], 123, 123.123, 'abc', {'key2': (4, 5, 6), 'key1': (1, 2, 3)}] 
